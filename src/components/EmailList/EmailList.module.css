@@ -1,0 +1,89 @@
+.mainContainer{
+    display: flex;
+    padding: 0px 50px 40px 50px;
+    margin-top: 16px;
+    gap: 30px
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+  
+
+
+.emailList {
+    max-height: 100vh;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+      
+}
+
+.displayhalf{
+    width: 35%;
+}
+
+.displayFull{
+    width: 100%;
+}
+
+.emailListItem{
+    background-color: #ffffff;
+    display: flex;
+    border: 1px solid #cfd2dc;
+    border-radius: 8px;
+}
+
+.selectedEmail{
+    border: 1px solid #e54065;
+}
+
+.readEmail{
+    background-color: #f2f2f2;
+}
+
+.favorite{
+    padding-left: 25px;
+    color: #e54065;
+    font-weight: 600;
+    font-size: small;
+}
+
+.avatar{
+    margin: 10px 15px 10px 30px;
+    display: flex;
+    font-size: x-large;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #e54065;
+    border-radius: 50%;
+    height: 50px;
+    min-width: 50px;
+    text-transform: uppercase;
+}
+
+.emailInfo {
+    padding: 5px 0px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+
+.emailInfo p {
+    font-weight: normal;
+    margin: 0;
+    padding: 5px;
+    
+}
+
+.emailDescription{
+    width: 85%;
+    margin: 10px 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

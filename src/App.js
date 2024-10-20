@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import RootLayout from './components/Root/RootLayout';
 import './App.css';
+import EmailList from './components/EmailList/EmailList';
+import { EmailsProvider } from './store/emailContext';
 
 function App() {
+  const router = createBrowserRouter([
+    {
+      path: '/',
+      element: <RootLayout/>,
+      errorElement: <h1>Error</h1>,
+      children: [
+        { index: true, element: <EmailList />}
+      ]
+    }
+  ])
+  
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <EmailsProvider>
+      <RouterProvider router={router} />
+    </EmailsProvider>
+    
   );
 }
 
